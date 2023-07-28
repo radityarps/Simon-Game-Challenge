@@ -7,10 +7,9 @@ function nextSequence() {
   var randomNumber = Math.floor(Math.random() * 4);
   var randomChosenColor = buttonColors[randomNumber];
   gamePattern.push(randomChosenColor);
-  $("#" + randomChosenColor).addClass("pressed");
-  setTimeout(function () {
-    $("#" + randomChosenColor).removeClass("pressed");
-  }, 250);
+  $("#" + randomChosenColor)
+    .fadeOut(100)
+    .fadeIn(100);
   whatSound(randomChosenColor);
 }
 
